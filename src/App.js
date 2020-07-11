@@ -12,7 +12,7 @@ const App = () => {
         <div className="header">
           <img src="./header_background.jpg" alt="Des montgolfières survolant une valée"/>
           <Route exact path="/" component={ UsersList } />
-          <Route exact path="/profil/id:" component={ Profil } />
+          <Route exact path="/profil/:id" component={ Profil } />
         </div>
       </div>
     </Router>

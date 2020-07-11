@@ -15,7 +15,7 @@ const UsersList = () => {
                     <th>Ville</th>
                     <th></th>
                 </tr>
-                { Data.map(user => { 
+                { Data.map((user,) => { 
                     const { id, lastname, firstname, email, birthdate, city, info } = user
                     return user = <User 
                         id={ id }
