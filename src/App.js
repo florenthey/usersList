@@ -9,8 +9,8 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <div className="header">
-          <img src="./header_background.jpg" alt="Des montgolfières survolant une valée"/>
+        <div className="container">
+          <img className="img-responsive" src="./header_background.jpg" alt="Des montgolfières survolant une valée"/>
           <Route exact path="/" component={ UsersList } />
           <Route exact path="/profil/:id" component={ Profil } />
         </div>

@@ -52,3 +52,21 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.card-horizontal {
+  display: flex;
+}
+
+.rounded-circle {
+  width: 150px;
+  height: 150px;
+}
+
+.img-responsive {
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background-color: #435667!important;
+  margin-bottom: 5px;
+}
