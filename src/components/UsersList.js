@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Data from '../users.json'
 import User from './User';
 
 const UsersList = () => {
+    const [ data, setData ] = useState(Data);
+    const [ toggle, setToggle ] = useState(false)
+    const pictoTriangle = <img src="../picto_triangle_active.png" />;
+        
+    // filter ne change pas les valeurs du state, la vue ne ce render pas
+    // donc utilisation du boolean toggle
+    const filter = () => {
+        setToggle(!toggle);
+        setData(Data.sort((a, b) => a.birthdate - b.birthdate));
+        console.log("data", data)
+    }
 
     return(
             <div className="container">
@@ -15,10 +26,10 @@ const UsersList = () => {
                 <table className="table">
                     <tbody>
                     <tr>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Age</th>
-                        <th>Ville</th>
+                        <th>Nom { pictoTriangle }</th>
+                        <th>Email { pictoTriangle }</th>
+                        <th onClick={ () => filter() } >Age { pictoTriangle }</th>
+                        <th>Ville { pictoTriangle }</th>
                         <th></th>
                     </tr>
                     { Data.map((user,) => { 

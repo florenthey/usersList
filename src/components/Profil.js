@@ -14,7 +14,7 @@ const Profil = (props) => {
 
             <div class="card">
             <div class="card-horizontal">
-            <img class="rounded-circle img_info" src={`../../user_${Data[id].id}.jpg`} alt="Card image cap" />
+            <img class="rounded-circle" src={`../../user_${Data[id].id}.jpg`} alt="Card image cap" />
                 <div class="card-body text-left">
                     <h1 class="card-title">{`${Data[id].lastname} ${Data[id].firstname}`}</h1>
                     <p><b>Email: </b>{Data[id].email}</p>

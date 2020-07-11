@@ -60,6 +60,7 @@ tr:nth-child(even) {
 .rounded-circle {
   width: 150px;
   height: 150px;
+  margin: 30px;
 }
 
 .img-responsive {
