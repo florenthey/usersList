@@ -1,7 +1,6 @@
 import React from 'react';
 import Data from '../users.json'
 import User from './User';
-import Profil from './Profil';
 
 const UsersList = () => {
 

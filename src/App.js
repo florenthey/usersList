@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import UsersList from './components/UsersList';
+import Profil from './components/Profil';
 
 const App = () => {
 
   return (
-    <div className="App">
-      <div className="header">
-        <img src="./header_background.jpg" alt="Des montgolfières survolant une valée"/>
-        <UsersList />
+    <Router>
+      <div className="App">
+        <div className="header">
+          <img src="./header_background.jpg" alt="Des montgolfières survolant une valée"/>
+          <Route exact path="/" component={ UsersList } />
+          <Route exact path="/profil/id:" component={ Profil } />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

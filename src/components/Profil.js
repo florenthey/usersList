@@ -1,13 +1,19 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Data from '../users.json'
 
-const Profil = (id, lastname, firstname, email, birthdate, city, info) => {
+const Profil = () => {
+
+    const { id } = this.props.match.params;
+    //const [lastname, firstname, email, city,info] = Data[id];
 
     return(
         <div>
-            <p>Email: {email}</p>
-            <p>Age:</p>
-            <p>Ville:</p>
-            <p></p>
+            <p>{`€{Data[id].lastname} ${Data[id].firstname}`}</p>
+            <p>Email:{Data[id].email}</p>
+            <p>Age:{Data[id].birthdate}</p>
+            <p>Ville:{Data[id].city}</p>
+            <p>{Data[id].info}</p>
         </div>
     )
 }

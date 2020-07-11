@@ -1,11 +1,8 @@
 import React from 'react';
-import Profil from './Profil'
+import { NavLink } from 'react-router-dom';
+
 
 const User = ({ id, lastname, firstname, email, birthdate, city, info }) => {
-    
-    const displayProfil = () => {
-       
-    }
 
     return(
         <tr>
@@ -14,9 +11,9 @@ const User = ({ id, lastname, firstname, email, birthdate, city, info }) => {
             <td>{ birthdate }</td>
             <td>{ city }</td>
             <td>
-                <a onClick={ displayProfil }>
+                <NavLink to={`/profil/${ id }`} className="nav-link">
                     <img src="./picto_plus.png" alt="icon en forme de croix plus" />
-                </a>
+                </NavLink>
             </td>
         </tr>
     )
