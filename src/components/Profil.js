@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Data from '../users.json'
 
 const Profil = (props) => {
-
     const { id } = props.match.params;
 
     return(
@@ -12,13 +11,13 @@ const Profil = (props) => {
                 Retour
             </NavLink>
 
-            <div class="card">
-            <div class="card-horizontal">
-            <img class="rounded-circle" src={`../../user_${Data[id].id}.jpg`} alt="Card image cap" />
-                <div class="card-body text-left">
-                    <h1 class="card-title">{`${Data[id].lastname} ${Data[id].firstname}`}</h1>
+            <div className="card">
+            <div className="card-horizontal">
+            <img className="rounded-circle" src={`../../user_${Data[id].id}.jpg`} alt={`Photo de profil de l'utilisateur ${Data[id].firstname}`} />
+                <div className="card-body text-left">
+                    <h1 className="card-title">{`${Data[id].lastname} ${Data[id].firstname}`}</h1>
                     <p><b>Email: </b>{Data[id].email}</p>
-                    <p><b>Age: </b>{Data[id].birthdate}</p>
+                    <p><b>Age: </b>{new Date().getFullYear() - Data[id].birthdate + " ans"}</p>
                     <p><b>Ville: </b>{Data[id].city}</p>
                     <p>{Data[id].info}</p>
                 </div>
